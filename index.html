@@ -1,221 +1,248 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gestar Cloud - 极星云</title>
-    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/mdui/0.4.3/css/mdui.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link
+      rel="stylesheet"
+      href="https://cdn.bootcdn.net/ajax/libs/mdui/0.4.3/css/mdui.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
     <style>
-        body {
-            font-family: 'Microsoft-YaHei', sans-serif;
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center center;
-            background-attachment: fixed;
-        }
-        .mdui-container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding-top: 80px;
-            padding-bottom: 40px;
-        }
-        .mdui-appbar {
-            background-color: rgba(0,0,256,0.5);
-            top: 0;
-            left: 0;
-            right: 0;
-            position: fixed;
-            z-index: 1000;
-            transition: background-color 0.3s ease;
-        }
-        .mdui-appbar .mdui-toolbar {
-            justify-content: space-between;
-            height: 64px;
-        }
-        .mdui-toolbar-icon {
-            font-size: 32px;
-            line-height: 64px;
-            color: blue;
-            transition: transform 0.3s ease;
-        }
-        .mdui-toolbar-icon:hover {
-            transform: scale(1.2);
-        }
-        .mdui-appbar-scroll-hide {
-            transform: translateY(-64px);
-        }
-        .mdui-card-media img {
-            height: 240px;
-            object-fit: cover;
-        }
-        .service-list {
-            margin-top: 60px;
-        }
-        .service-item {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        .service-icon {
-            font-size: 64px;
-            line-height: 1;
-            display: inline-block;
-            margin-bottom: 20px;
-        }
-        .service-title {
-            font-size: 24px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-        .service-content {
-            font-size: 16px;
-            color: #666;
-            line-height: 24px;
-        }
-        .advantage-list {
-            margin-top: 80px;
-            text-align: center;
-        }
-        .advantage-item {
-            width: 300px;
-            margin-bottom: 40px;
-            padding: 20px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-            transition: box-shadow 0.3s ease;
-            display: inline-block;
-        }
-        .advantage-item:hover {
-            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-        }
-        .advantage-icon {
-            font-size: 48px;
-            line-height: 1;
-            margin-bottom: 20px;
-        }
-        .advantage-title {
-            font-size: 20px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-        .advantage-content {
-            font-size: 16px;
-            color: #666;
-            line-height: 24px;
-        }
-        .footer {
-            margin-top: 80px;
-            text-align: center;
-            color: #ddd;
-            font-size: 14px;
-        }
-        .footer p {
-            margin-bottom: 10px;
-        }
-        .footer a {
-            color: #ddd;
-            text-decoration: none;
-        }
-    .box {
-      background-image: url("https://source.unsplash.com/1600x900/daily");
-      background-size: cover;
-      background-position: center;
-      display: flex; /* 声明为 flex 布局 */
-      justify-content: center; /* 水平居中 */
-      align-items: center; /* 垂直居中 */
-      height: 400px;
-      border-radius: 10px;
-    }
+      body {
+        font-family: "Microsoft-YaHei", sans-serif;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: fixed;
+      }
+      .mdui-container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding-top: 80px;
+        padding-bottom: 40px;
+      }
+      .mdui-appbar {
+        background-color: rgba(0, 0, 256, 0.5);
+        top: 0;
+        left: 0;
+        right: 0;
+        position: fixed;
+        z-index: 1000;
+        transition: background-color 0.3s ease;
+      }
+      .mdui-appbar .mdui-toolbar {
+        justify-content: space-between;
+        height: 64px;
+      }
+      .mdui-toolbar-icon {
+        font-size: 32px;
+        line-height: 64px;
+        color: blue;
+        transition: transform 0.3s ease;
+      }
+      .mdui-toolbar-icon:hover {
+        transform: scale(1.2);
+      }
+      .mdui-appbar-scroll-hide {
+        transform: translateY(-64px);
+      }
+      .mdui-card-media img {
+        height: 240px;
+        object-fit: cover;
+      }
+      .service-list {
+        margin-top: 60px;
+      }
+      .service-item {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+      .service-icon {
+        font-size: 64px;
+        line-height: 1;
+        display: inline-block;
+        margin-bottom: 20px;
+      }
+      .service-title {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      .service-content {
+        font-size: 16px;
+        color: #666;
+        line-height: 24px;
+      }
+      .advantage-list {
+        margin-top: 80px;
+        text-align: center;
+      }
+      .advantage-item {
+        width: 300px;
+        margin-bottom: 40px;
+        padding: 20px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        transition: box-shadow 0.3s ease;
+        display: inline-block;
+      }
+      .advantage-item:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      }
+      .advantage-icon {
+        font-size: 48px;
+        line-height: 1;
+        margin-bottom: 20px;
+      }
+      .advantage-title {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      .advantage-content {
+        font-size: 16px;
+        color: #666;
+        line-height: 24px;
+      }
+      .footer {
+        margin-top: 80px;
+        text-align: center;
+        color: #ddd;
+        font-size: 14px;
+      }
+      .footer p {
+        margin-bottom: 10px;
+      }
+      .footer a {
+        color: #ddd;
+        text-decoration: none;
+      }
+      .box {
+        background-image: url("https://source.unsplash.com/1600x900/daily");
+        background-size: cover;
+        background-position: center;
+        display: flex; /* 声明为 flex 布局 */
+        justify-content: center; /* 水平居中 */
+        align-items: center; /* 垂直居中 */
+        height: 400px;
+        border-radius: 10px;
+      }
       .content {
-      text-align: center;
-      margin: 15%;
-      font-weight: bold;
-    }
+        text-align: center;
+        margin: 15%;
+        font-weight: bold;
+      }
+      div.mdui-appbar {
+        color: white;
+      }
     </style>
-</head>
-<body>
-<!-- 导航栏 -->
-<header class="mdui-appbar">
-    <div class="mdui-toolbar mdui-color-theme">
-        <a href="#" class="mdui-typo-headline">Gestar Cloud - 极星云</a>
-        
-    </div>
-</header>
+  </head>
+  <body>
+    <!-- 导航栏 -->
+    <header class="mdui-appbar">
+      <div class="mdui-toolbar mdui-color-theme">
+        <a href="#" class="mdui-typo-headline" style="font-weight: bold"
+          >Gestar Cloud - 极星云</a
+        >
+        <a href="https://drive.gestar.cloud" class="mdui-typo-headline"
+          >Drive</a
+        >
+      </div>
+    </header>
 
-<div class="mdui-container">
-    <!-- 介绍 -->
-    <div class="box">
-    <div class="content mdui-typo">
-        <h1 style="color: white;">Gestar Cloud - 极星云</h1>
-        <p id="text" style="color: white;">致力于提供创新、方便、亲民、低价的云服务。</p>
-    </div></div>
+    <div class="mdui-container">
+      <!-- 介绍 -->
+      <div class="box">
+        <div class="content mdui-typo">
+          <h1 style="color: white">Gestar Cloud - 极星云</h1>
+          <p id="text" style="color: white">
+            致力于提供创新、方便、亲民、低价的云服务。
+          </p>
+        </div>
+      </div>
 
-    <!-- 服务列表 -->
-    <div class="service-list">
+      <!-- 服务列表 -->
+      <div class="service-list">
         <h2 class="mdui-text-center">我们的服务</h2>
         <div class="mdui-row">
-            <div class="mdui-card">
-                <div class="mdui-card-primary">
-    <div class="mdui-card-primary-title"><i class="mdui-icon material-icons">cloud_queue</i>
-                Gestar Drive</div>
-    <div class="mdui-card-primary-subtitle">极星云盘</div>
-  </div>
+          <div class="mdui-card">
+            <div class="mdui-card-primary">
+              <div class="mdui-card-primary-title">
+                <i class="mdui-icon material-icons">cloud_queue</i> Gestar Drive
+              </div>
+              <div class="mdui-card-primary-subtitle">极星云盘</div>
+            </div>
             <div class="mdui-card-content">
-            <!--<div class="mdui-col-md-4 service-item">-->
-                <div class="service-content">Gestar Drive云盘是一个快速、安全、灵活的云存储平台，采用NVME固态硬盘，提供不限下载速度；数据全部加密，备份每天进行，保证用户数据安全；无会员制度，按实际使用容量付费，支持私人节点部署，可隔离私人秘密数据。</div>
+              <!--<div class="mdui-col-md-4 service-item">-->
+              <div class="service-content">
+                Gestar Drive 是一个快速、安全、灵活的云存储平台，采用 NVME
+                固态硬盘，提供不限下载速度；数据全部加密，备份每天进行，保证用户数据安全；无会员制度，按实际使用容量付费，支持私人节点部署，可隔离私人秘密数据。
+              </div>
             </div>
             <div class="mdui-card-actions">
-    <button class="mdui-btn mdui-btn-icon mdui-float-right">
-      <i onclick="JavaScript:window.location = 'https://drive.gestar.cloud'" class="mdui-icon material-icons">chevron_right</i>
-    </button>
-  </div>
+              <button class="mdui-btn mdui-btn-icon mdui-float-right">
+                <i
+                  onclick="javaScript:window.location = 'https://drive.gestar.cloud'"
+                  class="mdui-icon material-icons"
+                  >chevron_right</i
+                >
+              </button>
             </div>
+          </div>
         </div>
-    </div>
+      </div>
 
-    <!-- 优势列表 -->
-    <div class="advantage-list">
+      <!-- 优势列表 -->
+      <div class="advantage-list">
         <h2 class="mdui-text-center">我们的优势</h2>
         <p>我们致力于为客户提供最好的服务，以下是我们的优势：</p>
         <div class="mdui-row">
-            <div class="mdui-col-xs-12 mdui-col-md-4 advantage-item">
-                <div class="advantage-icon">
-                    <i class="mdui-icon material-icons">access_time</i>
-                </div>
-                <div class="advantage-title">7x24小时服务</div>
-                <div class="advantage-content">我们的客服团队全天候提供技术支持，无论何时您都可以随时联系我们。</div>
+          <div class="mdui-col-xs-12 mdui-col-md-4 advantage-item">
+            <div class="advantage-icon">
+              <i class="mdui-icon material-icons">access_time</i>
             </div>
-            <div class="mdui-col-xs-12 mdui-col-md-4 advantage-item">
-                <div class="advantage-icon">
-                    <i class="mdui-icon material-icons">scatter_plot</i>
-                </div>
-                <div class="advantage-title">强大的服务器集群</div>
-                <div class="advantage-content">我们拥有多台高性能服务器，支持快速部署和横向扩展，保证您的业务稳定运行。</div>
+            <div class="advantage-title">7x24小时服务</div>
+            <div class="advantage-content">
+              我们的客服团队全天候提供技术支持，无论何时您都可以随时联系我们。
             </div>
-            <div class="mdui-col-xs-12 mdui-col-md-4 advantage-item">
-                <div class="advantage-icon">
-                    <i class="mdui-icon material-icons">security</i>
-                </div>
-                <div class="advantage-title">安全可靠</div>
-                <div class="advantage-content">我们采用严格的安全措施，包括硬件防护、软件防护和数据加密，保障您的数据安全。</div>
+          </div>
+          <div class="mdui-col-xs-12 mdui-col-md-4 advantage-item">
+            <div class="advantage-icon">
+              <i class="mdui-icon material-icons">scatter_plot</i>
             </div>
+            <div class="advantage-title">强大的服务器集群</div>
+            <div class="advantage-content">
+              我们拥有多台高性能服务器，支持快速部署和横向扩展，保证您的业务稳定运行。
+            </div>
+          </div>
+          <div class="mdui-col-xs-12 mdui-col-md-4 advantage-item">
+            <div class="advantage-icon">
+              <i class="mdui-icon material-icons">security</i>
+            </div>
+            <div class="advantage-title">安全可靠</div>
+            <div class="advantage-content">
+              我们采用严格的安全措施，包括硬件防护、软件防护和数据加密，保障您的数据安全。
+            </div>
+          </div>
         </div>
+      </div>
     </div>
 
-</div>
+    <!-- 页脚 -->
+    <footer class="footer">
+      <p>联系我们：<a href="#">极星云官网</a></p>
+      <p>© 2023 Gestar Cloud. All Rights Reserved.</p>
+    </footer>
 
-<!-- 页脚 -->
-<footer class="footer">
-    <p>联系我们：<a href="#">极星云官网</a></p>
-    <p>© 2023 Gestar Cloud. All Rights Reserved.</p>
-</footer>
-
-<!-- 脚本 -->
-<script src="https://cdn.bootcdn.net/ajax/libs/mdui/0.4.3/js/mdui.min.js"></script>
-<script>
-    var appbar = new mdui.Headroom(document.querySelector('.mdui-appbar'));
-    appbar.init();
-    
-    
-</script>
-</body>
+    <!-- 脚本 -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/mdui/0.4.3/js/mdui.min.js"></script>
+    <script>
+      var appbar = new mdui.Headroom(document.querySelector(".mdui-appbar"));
+      appbar.init();
+    </script>
+  </body>
 </html>
